@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class EnemyMove : MonoBehaviour
 {
     [SerializeField] Transform[] _movePoint;
     [SerializeField] float _distance;
     [SerializeField] float _moveSpeed;
     [SerializeField] MoveType _moveType = MoveType.Stay;
     int _n;
-
+    public MoveType Type { get => _moveType; set => _moveType = value; }
     void Update()
     {
         if (_moveType == MoveType.Move)
@@ -27,7 +27,7 @@ public class Move : MonoBehaviour
         }
     }
 
-    enum MoveType
+    public enum MoveType
     {
         Stay,
         Move,
