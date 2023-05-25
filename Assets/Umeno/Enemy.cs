@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Enemy : MonoBehaviour
@@ -8,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int _hp;
     [SerializeField] GameObject _subWeaponLeft;
     [SerializeField] GameObject _subWeaponRigiht;
+    [SerializeField] Slider _enemyHp;
     BulletCreate _createScript;
     EnemyMove _moveScript;
     BulletCreate _createLeft;
@@ -17,6 +19,8 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        _enemyHp.maxValue = _hp;
+        _enemyHp.value = _hp;
         _createScript = GetComponent<BulletCreate>();
         _moveScript = GetComponent<EnemyMove>();
         _createLeft = _subWeaponLeft.GetComponent<BulletCreate>();
@@ -26,6 +30,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        _enemyHp.value = _hp;
         if(_hp < _maxHp / 3)
         {
             Debug.Log("3•ª‚Ì1");

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class player : MonoBehaviour
@@ -19,7 +18,12 @@ public class player : MonoBehaviour
     {
         if (collision.gameObject.tag == "bullet")
         {
+            FindObjectOfType<GameManager>().PlayerDamage();
             Destroy(this.gameObject);
+        }
+        if(collision.gameObject.tag == "PowerUp")
+        {
+
         }
     }
 }

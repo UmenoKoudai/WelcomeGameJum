@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject _sceneMove;
     Enemy _enemyScript;
 
+    public int PlayerCount { get => _playerCouunt; set => _playerCouunt = value; }
+
     void Start()
     {
         _enemyScript = _enemy.GetComponent<Enemy>();
@@ -35,5 +37,14 @@ public class GameManager : MonoBehaviour
     {
         _playerCouunt--;
         Instantiate(_player, _muzzle.position, transform.rotation);
+    }
+
+    public void BulletDestroy()
+    {
+        var _bullets = FindObjectsOfType<EnemyBullet>();
+        for(int i = 0; i < _bullets.Length; i++)
+        {
+            Destroy(_bullets[i]);
+        }
     }
 }
