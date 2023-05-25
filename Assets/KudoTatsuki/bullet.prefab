@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 459083469909507480}
   - component: {fileID: 459083469909507481}
   - component: {fileID: 459083469909507482}
-  - component: {fileID: 1367035242810749700}
   - component: {fileID: -717970828191382}
+  - component: {fileID: -2711089454092606226}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -94,28 +94,15 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459083469909507483}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.15, y: 0.31}
   m_Direction: 0
---- !u!114 &1367035242810749700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459083469909507483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1914f09080a649cb99752c8009b73be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerId: 0
 --- !u!50 &-717970828191382
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +124,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-2711089454092606226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459083469909507483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad87a12ea909084188bf7ac37936bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _power: 5
+  _speed: 10

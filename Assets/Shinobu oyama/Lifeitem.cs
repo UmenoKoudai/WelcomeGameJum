@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUp : ItemBase
+public class Lifeitem : ItemBase
 {
     public override void ItemAction()
     {
         Debug.Log("パワーアップ");
-        FindObjectOfType<player>().Power += 5; ;
+        FindObjectOfType<GameManager>().PlayerCount++;
     }
 }

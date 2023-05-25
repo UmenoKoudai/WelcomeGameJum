@@ -27,9 +27,9 @@ public class GameManager : MonoBehaviour
         {
             _sceneMove.GetComponent<scenechange>().SeneLoad("GameOver");
         }
-        if(FindObjectsOfType<Enemy>().Length < 0)
+        if(FindObjectsOfType<Enemy>().Length < 1)
         {
-            _sceneMove.GetComponent<scenechange>().SeneLoad("GameClear");
+            _sceneMove.GetComponent<scenechange>().SeneLoad("Game Clear");
         }
     }
 
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         var _bullets = FindObjectsOfType<EnemyBullet>();
         for(int i = 0; i < _bullets.Length; i++)
         {
-            Destroy(_bullets[i]);
+            Destroy(_bullets[i].gameObject);
         }
     }
 }
