@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7102891455406457977}
   m_Layer: 0
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2438573349379230774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.19, y: -1.31, z: 0}
-  m_LocalScale: {x: 0.55806, y: 0.55806, z: 0.55806}
+  m_LocalScale: {x: 0.122404635, y: 0.122404635, z: 0.122404635}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a12348f10a1c3b4bac3af43dafe2d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
-  _direction: {x: -0.7772579, y: 0.62918234, z: 0}
+  _moveSpeed: 0.7
+  _direction: {x: 0.24693537, y: -0.30000007, z: 0}
 --- !u!50 &-7206205503453414474
 Rigidbody2D:
   serializedVersion: 4
